@@ -18,7 +18,7 @@ class StudentsInMLOps:
         elif num_students <= 0:
             print("Number of students to drop should be greater than 0.")
         else:
-            print("Invalid number of students to drop.")
+            print("Invalid no of students to drop.")
 
     def getTotalStrength(self):
         return self.total_strength
@@ -31,7 +31,7 @@ if __name__ == "__main__":
     mlops_class = StudentsInMLOps()
     mlops_class.enrollStudents(20)
     mlops_class.enrollStudents(10)
-    print("Total strength:", mlops_class.getTotalStrength())
-    print("Class name:", mlops_class.getClassName())
+    print("Total Strength:", mlops_class.getTotalStrength())
+    print("Class Name:", mlops_class.getClassName())
     mlops_class.dropStudents(5)
-    print("Total strength after dropping students:", mlops_class.getTotalStrength())
+    print("Total Strength After Dropping Students:", mlops_class.getTotalStrength())
