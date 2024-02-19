@@ -1,4 +1,4 @@
-name: Python Test
+name: app
 
 on:
   push:
@@ -9,6 +9,9 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
+    strategy:
+         matrix:
+                on:  [ ubuntu-latest, windows,macOS-latest]
     
     steps:
     - name: Checkout Repository
@@ -17,13 +20,12 @@ jobs:
     - name: Set up Python environment
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'  # You can specify the Python version you need
+        python-version: '3.10'  # You can specify the Python version you need
         
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt  # Assuming you have a requirements.txt file
+        make install
         
     - name: Execute test cases
       run: |
-        python test.py  # Assuming you have a test script named test.py
-
+          make test
