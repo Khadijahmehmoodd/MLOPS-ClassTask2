@@ -6,9 +6,7 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
-    strategy:
-         matrix:
-                on:  [ ubuntu-latest, windows,macOS-latest]
+   
     
     steps:
     - name: Checkout Repository
@@ -21,7 +19,7 @@ jobs:
         
     - name: Install dependencies
       run: |
-        make install
+           run: pip3 install -r requirements.txt
         
     - name: Execute test cases
       run: |
