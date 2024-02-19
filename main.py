@@ -14,7 +14,7 @@ class StudentsInMLOps:
     def dropStudents(self, num_students):
         if num_students > 0 and num_students <= self.total_strength:
             self.total_strength -= num_students
-            print(f"{num_students} students dropped successfully.")
+            print(f"{num_students} Students dropped successfully.")
         elif num_students <= 0:
             print("Number of students to drop should be greater than 0.")
         else:
