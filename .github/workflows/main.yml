@@ -1,31 +1,16 @@
-<<<<<<< HEAD
-
 name: Python CI
-
-=======
-name: Python CI
-
->>>>>>> 1827639749442c4a79838d93970f643ce0311f77
-on: push
-
+'on': push
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.10
-<<<<<<< HEAD
-=======
-          
->>>>>>> 1827639749442c4a79838d93970f643ce0311f77
+          python-version: 3.x
       - name: Install dependencies
-        run: pip3 install -r requirements.txt
-
+        run: make install
       - name: Run tests
         run: make test
