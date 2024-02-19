@@ -1,8 +1,7 @@
 name: myapp
 
-on: pusH
+on: push
     
-
 jobs:
   test:
     name: Test
