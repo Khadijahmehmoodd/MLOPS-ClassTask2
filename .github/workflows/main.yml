@@ -1,0 +1,29 @@
+name: Python Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python environment
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'  # You can specify the Python version you need
+        
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt  # Assuming you have a requirements.txt file
+        
+    - name: Execute test cases
+      run: |
+        python test.py  # Assuming you have a test script named test.py
+
