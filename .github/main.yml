@@ -1,9 +1,7 @@
 name: myapp
 
-on:
-  push:
-    branches:
-      - main
+on: pusH
+    
 
 jobs:
   test:
