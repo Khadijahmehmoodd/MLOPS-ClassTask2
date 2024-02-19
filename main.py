@@ -9,7 +9,7 @@ class StudentsInMLOps:
             self.total_strength += num_students
             print(f"{num_students} Students Enrolled Successfully.")
         else:
-            print("No of students to enroll should be greater than 0.")
+            print("No of Students to enroll should be greater than 0.")
 
     def dropStudents(self, num_students):
         if num_students > 0 and num_students <= self.total_strength:
